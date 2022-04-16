@@ -10,7 +10,7 @@
             // compatible with IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function () {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
                     callback(xmlhttp.responseText);
                 }
             }
@@ -40,28 +40,22 @@
                 document.getElementById("image").style.display = 'none';
 
                 let url = document.getElementById("link").value;
-                callAjax("https://cors-anywhere.herokuapp.com/" + url, function (text) {
-                    let searchResults = regex.exec(text);
-                    if (searchResults !== null) {
-                        let previewUrl = searchResults[1];
-                        let title = text.match(regex2)[0];
-                        while ((image = regex3.exec(text)) !== null) {
-                            let imageEl = document.getElementById("image");
-                            imageEl.src = image[1];
-                            imageEl.style.display = 'initial';
-                        }
+                callAjax("https://cl5qtr94ti.execute-api.eu-central-1.amazonaws.com/test/preview/?url=" + url, function (text) {
+                    let response = JSON.parse(text);
+                    let previewUrl = response["audio_url"];
+                    let title = response["title"];
+                    let imageUrl = response["image_url"];
 
-                        document.getElementById("title").innerText = title.substring(0, title.length - 17).substring(7);
-                        let audio = document.getElementById('audio');
-                        let audioSrc = document.getElementById('audioSource');
-                        audio.style.display = 'initial';
-                        audioSrc.src = previewUrl;
-                        audio.load();
-                        document.getElementById("loader").style.display = 'none';
-                    } else {
-                        document.getElementById("title").innerText = "Not found";
-                        document.getElementById("loader").style.display = 'none';
-                    }
+                    let imageEl = document.getElementById("image");
+                    imageEl.src = imageUrl
+                    imageEl.style.display = 'initial';
+                    document.getElementById("title").innerText = title;
+                    let audio = document.getElementById('audio');
+                    let audioSrc = document.getElementById('audioSource');
+                    audio.style.display = 'initial';
+                    audioSrc.src = previewUrl;
+                    audio.load();
+                    document.getElementById("loader").style.display = 'none';
                 })
             })
         })

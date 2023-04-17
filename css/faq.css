@@ -1,0 +1,13 @@
+:root {
+    --bg-color: #ebebde;
+    --fg-color: #777764;
+    --text-color: #464747;
+    --on-fg-color: #ebebde;
+}
+
+
+html {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}

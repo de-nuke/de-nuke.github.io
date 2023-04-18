@@ -11,3 +11,16 @@ html {
     background-color: var(--bg-color);
     color: var(--text-color);
 }
+
+body {
+    background-color: transparent !important;
+}
+
+.accordion-body > div {
+    margin-bottom: 1rem;
+}
+
+.accordion {
+    --bs-accordion-active-bg: var(--fg-color);
+    --bs-accordion-active-color: var(--on-fg-color);
+}

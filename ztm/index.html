@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZTM check</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script
+			  src="https://code.jquery.com/jquery-3.6.4.min.js"
+			  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+			  crossorigin="anonymous"></script>
+</head>
+<body>
+<form action="" method="get" onsubmit="check_ztm();return false;">
+    <div>
+        <label for="lines">Linie ZTM które sprawdzić:</label> <input id="lines" type="text"/>
+    </div>
+    <div>
+        <input type="submit" value="Sprawdź"></input>
+    </div>
+</form>
+<div id="results">
+
+</div>
+
+<script src="/js/ztm.js" defer></script>
+</body>
+</html>

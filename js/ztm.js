@@ -29,7 +29,6 @@ function check_ztm() {
   let lines_split = lines.split(/\W/).map(line => line.toLowerCase()).filter(line => !!line);
 
   let queryParams = lines_split.map(line => "line=" + line).join("&");
-
   $.get("https://hxlqiid2l6.execute-api.eu-central-1.amazonaws.com/default/ztm?" + queryParams).then(result => {
     for (let i=0; i<result.length; i++){
       let date = new Date(result[i].date);
@@ -53,3 +52,22 @@ function check_ztm() {
 
   })
 }
+
+
+$(document).ready(
+    $("#form").on("submit", event => {
+      event.preventDefault();
+      check_ztm();
+    })
+)
+
+
+$(".btn-pre-value").click(event => {
+  let val = $("#lines").val();
+  if (val){
+    val += "," + event.target.textContent;
+  } else {
+    val = event.target.textContent;
+  }
+  $("#lines").val(val);
+})

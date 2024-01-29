@@ -306,7 +306,7 @@ body {
 
 
   scroll-snap-type: y mandatory;
-  background-image: url("/img/esencja-background-no-text.png");
+  background-image: url("/esencja-preview/img/esencja-background-no-text.png");
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -1,0 +1,117 @@
+@media (max-width: 1250px) {
+  /* BEGIN Background – small screen */
+  .section {
+    --scale-images: 2;
+
+    /*--bg-size: calc(var(--scale-images) * 100%);*/
+    --bg-size: cover;
+
+    -webkit-background-size: var(--bg-size);
+    -moz-background-size: var(--bg-size);
+    -o-background-size: var(--bg-size);
+    background-size: var(--bg-size);
+    background-position-x: center;
+    overflow: hidden;
+  }
+
+  .s1 {
+    background-image: url('/esencja-preview/img/s1.png');
+    min-height: calc(var(--scale-images) * 5132 / 3840 * 100vw);
+  }
+
+  .s2 {
+    background-image: url('/esencja-preview/img/s2.png');
+    min-height: calc(var(--scale-images) * 2035 / 3840 * 100vw);
+  }
+
+  .s3 {
+    background-image: url('/esencja-preview/img/s3.png');
+    min-height: calc(var(--scale-images) * 3421 / 3840 * 100vw);
+  }
+
+  .s4 {
+    background-image: url('/esencja-preview/img/s4.png');
+    min-height: calc(var(--scale-images) * 2475 / 3840 * 100vw);
+  }
+
+  .s5 {
+    background-image: url('/esencja-preview/img/s5.png');
+    min-height: calc(var(--scale-images) * 2816 / 3840 * 100vw);
+  }
+
+  .s6 {
+    background-image: url('/esencja-preview/img/s6.png');
+    min-height: calc(var(--scale-images) * 9311 / 3840 * 100vw);
+  }
+
+  .s7 {
+    background-image: url('/esencja-preview/img/s7.png');
+    min-height: calc(var(--scale-images) * 1173 / 3840 * 100vw);
+  }
+
+  /* END Background – small screen */
+  /* BEGIN Small screen overrides: */
+  .logo-img {
+    width: 50%;
+  }
+
+  .title {
+    padding-top: 20px;
+  }
+
+  .content {
+    text-shadow: #ffffff 0 0 2px;
+    padding-top: 73px;
+    line-height: 1.2;
+    text-align: center;
+    text-align-last: center;
+  }
+
+  .s2 .content p,
+  .s3 .content p,
+  .s4 .content p,
+  .s5 .content p {
+    font-size: 32px;
+  }
+
+  .columns.bio > div {
+    padding-top: 0;
+  }
+
+  /* Full size on mobile */
+  .columns.bio > div,
+  .columns.bio > div h3,
+  .offer,
+  .offer-content.extra-service h4 {
+    width: 100%;
+  }
+
+  .columns.bio > div h3 {
+    font-size: 32px;
+  }
+
+  .columns.bio p {
+    line-height: initial;
+  }
+
+  .kontakt p {
+    font-size: 18px;
+  }
+
+  .offer .offer-set .offer-set-description {
+    letter-spacing: initial;
+  }
+
+  .offer .offer-set .offer-set-name,
+  .offer .offer-set .offer-set-description,
+  .offer .offer-set .offer-set-price,
+  .columns.footer .credits {
+    font-size: 24px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+}

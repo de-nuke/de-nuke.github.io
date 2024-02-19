@@ -10,7 +10,7 @@
   }
 
   .s1 {
-    min-height: calc(5132 / 3840 * 100vw);
+    height: calc(5132 / 3840 * 100vw);
   }
 
   .s2 {
@@ -82,6 +82,23 @@ body {
   margin-top: 30px;
 }
 
+
+.s1 .content {
+  padding-top: 0;
+  position: relative;
+  height: 100%;
+}
+
+
+.s1-bottom-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.s1-bottom-logo .logo-img {
+  width: 300px;
+}
 
 .container {
   color: #0c0c0c;

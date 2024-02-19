@@ -4,13 +4,13 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: 140%;
+    background-size: 145%;
       background-position-x: center;
     overflow: hidden;
   }
   /* BEGIN Background – small screen */
   .section {
-    --scale-images: 1.4;
+    --scale-images: 1.45;
 
     /*--bg-size: calc(var(--scale-images) * 100%);*/
     --bg-size: cover;
@@ -63,6 +63,10 @@
   /* BEGIN Small screen overrides: */
   .logo-img {
     width: 50%;
+  }
+
+  .s1-bottom-logo .logo-img {
+    width: 100px;
   }
 
   .title {
@@ -178,7 +182,7 @@
   }
 
   .content {
-    width: 95% !important;
+    width: 90% !important;
   }
 
   .kontakt h4, .offer h4 {
